@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta http-equiv="Cache-Control" content="public" />
+  <meta http-equiv="expires" content="never" />
+  <link href="../../styles/font-awesome.min.css" rel="stylesheet" />
+  <link href="../../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles/occupational.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row" id="topHeaderHeight">
+      <header id="top_header">
+        <h1 class="desktopHeader">
+          <!-- <a href="../../index.html"><img src="images/home.svg" height="20px" width="20px"/></a> -->
+          <a href="../../index.html">
+          </a>
+        </h1>
+
+        <div class="forMobileView">
+          <ul class="mobileHeadercontainer">
+            <li>
+              <img src="" height="29px" width="29px" />
+            </li>
+            <li>
+              <img src="" />
+            </li>
+            <li>
+              <img src="" />
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="form-header">
+        <h2>
+          <img src="" />
+          <span class="header_label"> </label>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="heighter relative" id="hidefirst">
+    <div class="row no-gutters height100per">
+      <div class="col-12 col-md-6 col-sm-12" id="formHide">
+        <div class="form-container">
+          <div class="form_wrapper col-12 col-sm-9">
+            <div class="col-sm-10 pad-0">
+              <label class="form-text"></label>
+            </div>
+            <div class="form-body">
+              <div class="col_manage">
+                <div class="relative" id="searchBox_Container">
+                  <label class="formLabel"></label>
+                  <input class="form-control py-2" type="Select occupation" value="" id="selectOccupation"
+                    placeholder="" autocomplete="off" />
+                </div>
+              </div>
+			 
+              <div class="col_manage">
+                <div class="relative">                  
+				  <div class="">				   				       					   
+					   	<label class="formLabel disabled-label"></label>			   
+						<select class="form-control selectBox" id="sel1" name="sellist1"  onchange="getactivevalue(this)" disabled>						
+					    <option value="" selected disabled>
+						<!-- Select Duties Code -->
+						</option>
+					    </select>						
+					</div>                  
+                </div>
+              </div>
+              <button class="accessRiskBtn"></button>
+            </div>
+
+            <div class="text-center viewbuttoncontainer">
+              <a href="" class="viewbutton"> </a>
+            </div>
+          </div>
+        </div>
+        <!-- Search Box Overlay-->
+        <div class="searchBox_backdrop">
+          <div id="search_box_container">
+            <div class="search_heading">
+              <h5></h5>
+              <div class="searchContainer relative">
+                <a href="#" class="closeButton">
+                  <img src="images/close.svg" />
+                </a>
+                <input class="searchControl" id="searchControl" name="searchControl" placeholder="Search Item"
+                  type="text" value="" />
+              </div>
+            </div>
+            <div class="search_body">
+              <ul class="list-group" id="occupationList"></ul>
+            </div>
+          </div>
+        </div>
+        <!-- Search Box Overlay END -->
+      </div>
+
+      <div class="col-12 col-md-6 col-sm-12 rightpanel">
+        <div class="card_wrapper_body" id="printPage">
+          <div class="header_container">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="" alt="" />
+                  <span></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="resetbutton">
+                  <img src="" alt="" />
+                  <span></span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="" alt="" />
+                  <span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="customerBoxBody">
+            <h5 class="title_heading" id="customerboxHeader"></h5>
+            <div class="card mb-3 ">
+              <div class="card-body card_body_bg">
+                <!--  <div class="col-12">
+                                     <div class="col-sm-6">
+                                            <span class="text-muted">Life Stage</span>
+                                     </div>
+                                     <div class="col-12 col-sm-6">
+                                            <label>Accumulator (45-54 years)</label>
+                                     </div>
+                                 </div> -->
+                <div class="row" id="">
+                  <div class="col-4 col-sm-4">
+                    <label class="text-white  titleAppend"></label>
+                  </div>
+                  <div class="col-8 col-sm-8  mb-2">
+                    <label class=" text-white" id="secondAppend"></label>
+                  </div>
+                  <div class="col-4 col-sm-4">
+                    <label class="text-white  titleAppend"></label>
+                  </div>
+                  <div class="col-8 col-sm-8  mb-2">
+                    <label class=" text-white" id="secondAppend1"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="riskcard">
+            <h5 class="title_heading"></h5>
+            <div class="card mb-3 material">
+              <div class="card-body">
+                <div class="risk_container relative">
+                  <div id="ratingdiv">
+                    <em></em>
+                    <ul class="risk_indicator"></ul>
+                  </div>
+                  <div id="msgratingdiv" style="display: none">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix pad-5"></div>
+          <div class="card mb-3 material" id="chemicalCard">
+            <div class="card-header card_heading" id="chemicalCardHead"></div>
+            <div class="card-body">
+              <div class="card_block">
+                <h6 class="block_heading" id="casualText"></h6>
+                <ul id="chemicalList"></ul>
+              </div>
+
+              <div class="card_block">
+                <h6 class="block_heading" id="conditionText"></h6>
+                <p class="title" id="healthTitle"></p>
+                <ul id="chemicalHealthList"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 material" id="toolBasedCard">
+            <div class="card-header card_heading"></div>
+            <div class="card-body">
+              <div class="card_block">
+                <h6 class="block_heading" id="block-heading"></h6>
+                <ul id="toolList"></ul>
+              </div>
+
+              <div class="card_block">
+                <h6 class="block_heading" id="conditionTitle"></h6>
+                <div id="toolhealthCardList" style="display: none">
+                  <p class="title" id="healthTitle"></p>
+                  <ul id="healthlist"></ul>
+                </div>
+                <div id="toolaccedentCardList" style="display: none">
+                  <p class="title" id="accidentTitle"></p>
+                  <ul id="accidentlist"></ul>
+                </div>
+                <div class="errorCardList" style="display: none">
+                  <ul id="errorList">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card mb-3 material" id="envCard">
+            <div class="card-header card_heading"></div>
+            <div class="card-body">
+              <div class="card_block">
+                <h6 class="block_heading" id="titleHeading"></h6>
+                <ul id="envcasualList"></ul>
+              </div>
+
+              <div class="card_block">
+                <h6 class="block_heading" id="conditionTitle"></h6>
+                <div id="envhealthCardList" style="display: none;">
+                  <p class="title" id="healthTitle"></p>
+                  <ul id="healthList"></ul>
+                </div>
+                <div id="envaccedentCardList" style="display: none">
+                  <p class="title" id="accidentTitle"></p>
+                  <ul id="accidentlist"></ul>
+                </div>
+                <div class="errorCardList" style="display: none">
+                  <ul id="errorList">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---Search popup start-->
+  <div class="searchBox_backdrop"></div>
+  <!-- FULL SIZE OVERLAY AS PER DESIGN -->
+  <!-- <div class="searchBox_backdrop">
+			<div id="search_box_container">
+				<div class="search_heading">
+					<h5></h5>
+					<div class="searchContainer relative">
+						<a href="#" class="closeButton">
+							<img src="../../images/close.svg" />
+						</a>
+						<input
+							class="searchControl"
+							id="searchControl"
+							name="searchControl"
+							placeholder="Search Item"
+							type="text"
+							value=""
+						/>
+					</div>
+				</div>
+				<div class="search_body">
+					<ul class="list-group" id="occupationList"></ul>
+				</div>
+			</div>
+		</div> -->
+  <!---Search popup End --->
+
+  <div class="launch-wrapper">
+    <div class="launch-wrapper-inner">
+      <p></p>
+      <span>
+        <a href="javascript:void(0)" class="launch-btn "></a>
+      </span>
+      <span>
+        <a href="javascript:void(0)" class="view-demo" id="occupationHazardAdvisor"></a>
+      </span>
+    </div>
+  </div>
+
+  <!--Video popup--->
+  <div id="video-popup" data-video-id="video_popup" class="video-popup">
+    <div class="video-popup-inner">
+      <div class="close-popup">
+        <a data-target="video-popup" href="#">
+          <img src="images/close_video.svg" alt="image">
+        </a>
+      </div>
+      <div class="video-wrapper">
+        <video id="videoPlayer" preload="metadata" controls="" crossorigin="anonymous" width="100%" height="100%">
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- crousel popup start-->
+
+  <div id="img_txt_popup" data-video-id="image_text" class="img_txt_popup">
+    <div class="imgtxt-popup-inner">
+      <h3></h3>
+      <div class="close-popup">
+        <a data-target="img_txt_popup" href="javascript:void(0)">
+          <img src="images/img_text_close.svg" alt="image">
+        </a>
+      </div>
+      <div class="imgtxt-wrapper">
+        <div id="appedData">
+        </div>
+        <div class="common-btns-journey">
+          <div class="btn-wrap-journey">
+            <a href="" class="show_prev_journey"></a>            
+            <a href="" class="show_next_journey"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- crousel popup End-->
+
+
+
+
+
+  <script src="../../scripts/jquery-min.js" type="text/javascript"></script>
+  <script src="scripts/occupational.js" type="text/javascript"></script>
+</body>
+
+</html>
